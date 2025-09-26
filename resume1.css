@@ -182,6 +182,52 @@ section p {
 }
 
 /* Skills Section */
+.top-skills {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.top-skills h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.primary-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.skill-badge {
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-badge.expert {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.skill-badge.advanced {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+}
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -305,6 +351,34 @@ section p {
     left: 0;
     color: var(--primary-blue);
     font-weight: bold;
+}
+
+/* Languages Section */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.language-item {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.language-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--shadow);
+    border-color: var(--accent-blue);
+}
+
+.language-item strong {
+    color: var(--primary-dark);
+    font-weight: 600;
 }
 
 /* Experience Cards */
@@ -480,6 +554,16 @@ ul {
 
     .skills-container {
         grid-template-columns: 1fr;
+    }
+
+    .primary-skills {
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .skill-badge {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
     }
 
     .remote-capabilities {
