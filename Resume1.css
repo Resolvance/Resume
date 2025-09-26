@@ -37,10 +37,11 @@ p {
     margin: 0;
     font-size: 18px;
 }
-psum {
-    text-align: center;
+section p {
+    text-align: justify;
     margin: 0;
     font-size: 18px;
+    line-height: 1.5;
 }
 
 section {
