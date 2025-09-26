@@ -98,6 +98,36 @@ h1 {
     font-weight: 400;
 }
 
+.tagline {
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+    color: var(--accent-blue) !important;
+    margin: 0.5rem 0 1rem 0 !important;
+    opacity: 1 !important;
+}
+
+.professional-links {
+    margin: 1rem 0;
+}
+
+.professional-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.professional-links a:hover {
+    border-bottom-color: var(--accent-blue);
+}
+
+.contact-info {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
 /* Main Container */
 .container {
     max-width: 1200px;
@@ -152,19 +182,45 @@ section p {
 }
 
 /* Skills Section */
-.skills ul {
+.skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.skills-category {
+    background: var(--section-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.skills-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow);
+}
+
+.skills-category h3 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 0.5rem;
+}
+
+.skills-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.skills li {
+.skills-list li {
     background: linear-gradient(135deg, var(--light-blue), #f1f5f9);
-    padding: 1rem 1.25rem;
-    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
     border-left: 4px solid var(--primary-blue);
     font-weight: 500;
     color: var(--text-dark);
@@ -173,7 +229,7 @@ section p {
     overflow: hidden;
 }
 
-.skills li::before {
+.skills-list li::before {
     content: '';
     position: absolute;
     top: 0;
@@ -185,14 +241,67 @@ section p {
     opacity: 0;
 }
 
-.skills li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px var(--shadow);
+.skills-list li:hover {
+    transform: translateX(5px);
     border-left-color: var(--accent-blue);
+    box-shadow: 0 3px 10px var(--shadow);
 }
 
-.skills li:hover::before {
+.skills-list li:hover::before {
     opacity: 1;
+}
+
+/* Remote Work Section */
+.remote-capabilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.remote-category {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.remote-category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--shadow);
+    border-color: var(--accent-blue);
+}
+
+.remote-category h3 {
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+.remote-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.remote-category li {
+    padding: 0.5rem 0;
+    color: var(--text-medium);
+    font-weight: 400;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.remote-category li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
 }
 
 /* Experience Cards */
