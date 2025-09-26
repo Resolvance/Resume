@@ -182,10 +182,11 @@ section p {
 }
 
 /* Skills Section */
-.skills {
+.skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    max-width: 100%;
 }
 
 .skills-category {
@@ -254,8 +255,10 @@ section p {
 /* Remote Work Section */
 .remote-capabilities {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 1.5rem;
+    max-width: 100%;
 }
 
 .remote-category {
@@ -475,8 +478,13 @@ ul {
         text-align: left;
     }
 
-    .skills ul {
+    .skills-container {
         grid-template-columns: 1fr;
+    }
+
+    .remote-capabilities {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 
     .experience article {
